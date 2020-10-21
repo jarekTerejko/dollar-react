@@ -35,7 +35,7 @@ const Sidebar = ({ isOpen, toggleMenu }) => {
             </SidebarLink>
           </SidebarMenuItem>
           <SidebarMenuItem>
-            <SidebarLink to="sign-in" onClick={toggleMenu}>
+            <SidebarLink to="signup" onClick={toggleMenu}>
               sign in
             </SidebarLink>
           </SidebarMenuItem>
