@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Link as LinkRouter } from "react-router-dom";
-import { Link as LinkScroll } from 'react-scroll'
+import { Link as LinkScroll } from "react-scroll";
 
 export const Nav = styled.nav`
-  background: #000;
+  background: ${({ scrollNav }) => (scrollNav ? "#000" : "transparent")};
   min-height: 80px;
   margin-top: -80px;
   display: flex;
@@ -13,10 +13,7 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-
-  @media screen and (max-width: 960px) {
-    transition: 0.5s;
-  }
+  transition: 0.3s;
 `;
 
 export const NavbarContainer = styled.div`
@@ -51,8 +48,8 @@ export const MobileIcon = styled.button`
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
-    background:none;
-    border:none;
+    background: none;
+    border: none;
     cursor: pointer;
     color: #fff;
   }
@@ -71,50 +68,48 @@ export const NavMenu = styled.ul`
 `;
 
 export const NavItem = styled.li`
-    height: 80px;
-
-`
+  height: 80px;
+`;
 
 export const NavLinks = styled(LinkScroll)`
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0 1rem;
-    height: 100%;
-    cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  text-transform: capitalize;
 
-    &.active{
-        border-bottom: 3px solid #01bf71;
-    }
-`
+  &.active {
+    border-bottom: 3px solid #cd6133;;
+  }
+`;
 
 export const NavBtn = styled.div`
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    @media screen and (max-width: 768px){
-        display: none;
-    }
-`
-
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
 
 export const NavBtnLink = styled(LinkRouter)`
-    border-radius: 50px;
-    background: #cd6133;
-    white-space: nowrap;
-    padding: 10px 22px;
-    color: #fff;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: .3s;
-    text-decoration: none;
-    
+  border-radius: 50px;
+  background: #cd6133;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: capitalize;
+  text-decoration: none;
 
-    &:hover{
-        background: #fff;
-        color: #010606;
-    }
-
-`
+  &:hover {
+    background: #fff;
+    color: #010606;
+  }
+`;

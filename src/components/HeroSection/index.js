@@ -1,7 +1,16 @@
 import React from "react";
 import Video from "../../videos/video.mp4";
-import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper, HeroArrowIcon } from "./HeroElements";
-import {Button} from '../ButtonElement'
+import {
+  HeroContainer,
+  HeroBg,
+  VideoBg,
+  HeroContent,
+  HeroH1,
+  HeroP,
+  HeroBtnWrapper,
+  HeroArrowIcon,
+} from "./HeroElements";
+import { Button } from "../ButtonElement";
 
 const HeroSection = () => {
   return (
@@ -16,7 +25,19 @@ const HeroSection = () => {
           your next payment.
         </HeroP>
         <HeroBtnWrapper>
-          <Button to='sign-up' big="true"  primary="true" >Get Started<HeroArrowIcon/></Button>
+          <Button
+            to="signup"
+            big="true"
+            primary="true"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
+            Get Started
+            <HeroArrowIcon />
+          </Button>
         </HeroBtnWrapper>
       </HeroContent>
     </HeroContainer>

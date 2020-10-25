@@ -19,8 +19,14 @@ import {
   SocialIconLink,
   FooterWrapperTwo
 } from "./FooterElements";
+import {animateScroll} from 'react-scroll'
 
 const Footer = () => {
+
+  const goToTop = () => {
+    animateScroll.scrollToTop();
+  };
+
   return (
     <FooterContainer>
       <FooterWrapper>
@@ -92,13 +98,11 @@ const Footer = () => {
         </FooterLinkList>
       </FooterWrapper>
       <FooterWrapperTwo>
-      <SiteLogo to="/">dollar</SiteLogo>
+      <SiteLogo onClick={goToTop} to="/">dollar</SiteLogo>
         <SiteRights>
           &copy; {new Date().getFullYear()} All rights reserved
         </SiteRights>
-      
       <SocialMediaWrapper>
-        
         <SocialIconLink href="/" target="_blank" aria-label="Facebook">
           <FaFacebook />
         </SocialIconLink>

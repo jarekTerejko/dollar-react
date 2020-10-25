@@ -20,22 +20,54 @@ const Sidebar = ({ isOpen, toggleMenu }) => {
       <SidebarWrapper>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarLink to="about" onClick={toggleMenu}>
+            <SidebarLink
+              to="about"
+              onClick={toggleMenu}
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
               about
             </SidebarLink>
           </SidebarMenuItem>
           <SidebarMenuItem>
-            <SidebarLink to="discover" onClick={toggleMenu}>
+            <SidebarLink
+              to="discover"
+              onClick={toggleMenu}
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
               discover
             </SidebarLink>
           </SidebarMenuItem>
           <SidebarMenuItem>
-            <SidebarLink to="serveices" onClick={toggleMenu}>
+            <SidebarLink
+              to="serveices"
+              onClick={toggleMenu}
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
               services
             </SidebarLink>
           </SidebarMenuItem>
           <SidebarMenuItem>
-            <SidebarLink to="signup" onClick={toggleMenu}>
+            <SidebarLink
+              to="signup"
+              onClick={toggleMenu}
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
               sign in
             </SidebarLink>
           </SidebarMenuItem>

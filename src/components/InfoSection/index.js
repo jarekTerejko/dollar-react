@@ -1,4 +1,5 @@
 import React from "react";
+import { animateScroll } from "react-scroll";
 import {
   InfoContainer,
   InfoWrapper,
@@ -27,8 +28,12 @@ const InfoSection = ({
   darkText,
   img,
   imgStart,
-  primary
+  primary,
 }) => {
+  const goToTop = () => {
+    animateScroll.scrollToTop();
+  };
+
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -40,14 +45,18 @@ const InfoSection = ({
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrapper>
-                  <Button to="home"
+                  <Button
+                    to="/"
                     smooth={true}
                     duration={500}
                     spy={true}
                     exact="true"
                     offset={-80}
                     primary={primary ? 1 : 0}
-                  >{buttonLabel}</Button>
+                    onClick={goToTop}
+                  >
+                    {buttonLabel}
+                  </Button>
                 </BtnWrapper>
               </TextWrapper>
             </Column1>
