@@ -1,8 +1,8 @@
 export const homeObjOne = {
   id: "about",
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
   topLine: "Premium Bank",
   headline: "Unlimited Transactions with zero fees",
   description:
@@ -18,9 +18,9 @@ export const homeObjOne = {
 
 export const homeObjTwo = {
   id: "discover",
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
   topLine: "Unlimited Access",
   headline: "Login to your account at any time",
   description:
@@ -30,7 +30,7 @@ export const homeObjTwo = {
   img: require("../../images/svg4.svg"),
   alt: "car",
   dark: false,
-  primary: false,
+  primary: true,
   darkText: true,
 };
 
