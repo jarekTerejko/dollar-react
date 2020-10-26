@@ -33,7 +33,6 @@ export const NavLogo = styled(LinkRouter)`
   font-size: 1.5rem;
   display: flex;
   align-items: center;
-  margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
 `;
@@ -73,6 +72,7 @@ export const NavItem = styled.li`
 
 export const NavLinks = styled(LinkScroll)`
   color: #fff;
+  position: relative;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -81,8 +81,14 @@ export const NavLinks = styled(LinkScroll)`
   cursor: pointer;
   text-transform: capitalize;
 
-  &.active {
-    border-bottom: 3px solid #cd6133;;
+  &.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: #cd6133;
   }
 `;
 

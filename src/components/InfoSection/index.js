@@ -30,6 +30,7 @@ const InfoSection = ({
   imgStart,
   primary,
 }) => {
+  
   const goToTop = () => {
     animateScroll.scrollToTop();
   };

@@ -19,8 +19,7 @@ const Navbar = ({ toggleMenu }) => {
   const changeNav = () => {
     if (window.scrollY >= 80) {
       setScrollNav(true);
-    } 
-    else {
+    } else {
       setScrollNav(false);
     }
   };
@@ -28,14 +27,14 @@ const Navbar = ({ toggleMenu }) => {
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
 
+    return () => {
+      window.removeEventListener("scroll", changeNav);
+    };
   }, []);
-
 
   const goToTop = () => {
     animateScroll.scrollToTop();
   };
-
-//   window.addEventListener("scroll", changeNav);
 
   return (
     <>
@@ -61,25 +60,40 @@ const Navbar = ({ toggleMenu }) => {
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="discover" smooth={true}
+              <NavLinks
+                to="discover"
+                smooth={true}
                 duration={500}
                 spy={true}
                 exact="true"
-                offset={-80}>discover</NavLinks>
+                offset={-80}
+              >
+                discover
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="services" smooth={true}
+              <NavLinks
+                to="services"
+                smooth={true}
                 duration={500}
                 spy={true}
                 exact="true"
-                offset={-80}>services</NavLinks>
+                offset={-80}
+              >
+                services
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="signup" smooth={true}
+              <NavLinks
+                to="signup"
+                smooth={true}
                 duration={500}
                 spy={true}
                 exact="true"
-                offset={-80}>sign up</NavLinks>
+                offset={-80}
+              >
+                sign up
+              </NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
